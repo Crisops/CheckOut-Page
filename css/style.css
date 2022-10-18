@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
 }
 
 header{
@@ -41,7 +42,7 @@ section .gridFormCheckOut .informationCheckOutContact{
   height: inherit;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form{
+section form{
   position: relative;
   display: flex;
   width: 100%;
@@ -49,24 +50,24 @@ section .gridFormCheckOut .informationCheckOutContact form{
   flex-direction: column;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .titlePoint{
+section form .gridFormCheckOut .informationCheckOutContact .titlePoint{
   color: #333333;
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 2rem;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact{
   position: relative;
   display: block;
   margin-bottom: 2rem;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact:nth-child(3){
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact:nth-child(3){
   margin-bottom: 4rem;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact input{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact input{
   outline: none;
   color: #333333;
   font-size: 1rem;
@@ -77,13 +78,13 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   width: 100%;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact input::placeholder{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact input::placeholder{
   color: #828282;
   font-weight: 600;
   font-size: .9rem;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact span{
   position: absolute;
   left: 0;
   display: flex;
@@ -93,7 +94,7 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   align-items: center;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span:nth-child(2){
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact span:nth-child(2){
   position: absolute;
   top: 20px;
   left: 50px;
@@ -110,7 +111,7 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
 }
 
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span:nth-child(2).active{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact span:nth-child(2).active{
   position: absolute;
   top: -5px;
   left: 10px;
@@ -118,38 +119,38 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   visibility: visible;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span i{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact span i{
   font-size: 1.5rem;
   color: #828282;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 20px;
   margin-bottom: 1.3rem;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country{
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 10px ;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country span{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country span{
   color: #4F4F4F;
   font-weight: 600;
   font-size: .8rem;
   margin-left: 10px;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon{
   position: relative;
   display: block;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon span:nth-child(1){
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon span:nth-child(1){
   position: absolute;
   top: 15px;
   left: 0;
@@ -158,7 +159,7 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   z-index: 1;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon select{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select{
   position: relative;
   outline: none;
   color: #828282;
@@ -171,7 +172,7 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   cursor: pointer;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon select option{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select option{
   padding: 15px 15px 15px 45px;
   color: #828282;
   font-size: .9rem;
@@ -179,7 +180,7 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
 }
 
 
-section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon input{
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon input{
   position: relative;
   outline: none;
   color: #828282;
@@ -192,26 +193,26 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
 }
 
 
-section .gridFormCheckOut .informationCheckOutContact form .submitInformation{
+section form .gridFormCheckOut .informationCheckOutContact .submitInformation{
   position: relative;
   display: block;
   width: 100%;
   height: 100px;
 }
 
-section .gridFormCheckOut .informationCheckOutContact form .submitInformation label{
+section form .gridFormCheckOut .informationCheckOutContact .submitInformation label{
   display: flex;
   float: left;
   font-size: .9rem;
 }
 
 
-section .gridFormCheckOut .informationCheckOutContact form .submitInformation input:nth-child(1){
+section form .gridFormCheckOut .informationCheckOutContact .submitInformation input:nth-child(1){
   margin-right: 10px;
 }
 
 
-section .gridFormCheckOut .informationCheckOutContact form .submitInformation input:nth-child(2){
+section form .gridFormCheckOut .informationCheckOutContact .submitInformation input:nth-child(2){
   outline: none;
   border: none;
   position: absolute;
@@ -225,3 +226,194 @@ section .gridFormCheckOut .informationCheckOutContact form .submitInformation in
   cursor: pointer;
 }
 
+section form .shopping{
+  position: relative;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 10px;
+  background: #F2F2F2;
+  width: 100%;
+  height: 70%;
+  border-radius: 12px;
+}
+
+section form .shopping .itemShopping{
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  column-gap: 10px;
+}
+
+
+section form .shopping .itemShopping .boxImg{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+section form .shopping .itemShopping .boxImg .boxImgShopping{
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+section form .shopping .itemShopping .boxImg .boxImgShopping img{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+section form .shopping .itemShopping .boxContentShopping{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section form .shopping .itemShopping .boxContentShopping .product{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin-top: 2rem;
+}
+
+section form .shopping .itemShopping .boxContentShopping .product span:nth-child(1){
+  color: #4E5150;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+section form .shopping .itemShopping .boxContentShopping .product span:nth-child(2){
+  color: #F2994A;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+section form .shopping .itemShopping .boxContentShopping .product span:nth-child(2) span{
+  color: #4E5150;
+  text-decoration: line-through;
+  font-size: .7rem;
+  margin-left: 6px;
+}
+
+section form .shopping .itemShopping .boxContentShopping .quantity{
+  position: relative;
+  /* max-width: 40%; */
+  margin-bottom: 4rem;
+}
+
+section form .shopping .itemShopping .boxContentShopping .quantity input{
+  outline: none;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  text-align: center;
+  width: 130px;
+  padding: 20px 1px;
+  font-size: .8rem;
+}
+
+section form .shopping .itemShopping .boxContentShopping .quantity i{
+  position: absolute;
+  cursor: pointer;
+}
+
+section form .shopping .itemShopping .boxContentShopping .quantity i:nth-child(1){
+  top: 20px;
+  left: 10px;
+  font-size: 1.5rem;
+}
+
+section form .shopping .itemShopping .boxContentShopping .quantity i:nth-child(2){
+  top: 20px;
+  left: 95px;
+  font-size: 1.5rem;
+}
+
+section form .shopping .totalShopping{
+  position: relative;
+  display:block;
+}
+
+section form .shopping .totalShopping .line{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height: 2px;
+  background: #BDBDBD;
+}
+
+section form .shopping .totalShopping .shipping{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+}
+
+section form .shopping .totalShopping .shipping span:nth-child(1){
+  color: #333333;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+section form .shopping .totalShopping .shipping span:nth-child(2){
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 3rem;
+}
+
+footer p{
+  color: #cfcfcf;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+footer p span{
+  position: relative;
+}
+
+footer p span a{
+  color: #BDBDBD;
+  transition: 2s all ease;
+}
+
+footer p span a{
+  cursor: pointer;
+}
+
+footer p span::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #633120;
+  transition: 1s all ease;
+}
+
+footer p span:hover::before{
+  content:"";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #633120;
+}
+
+footer p span:hover a{
+  color: #633120;
+}

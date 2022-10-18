@@ -15,69 +15,122 @@
     <h1>Checkout</h1>
   </header>
   <section>
-    <div class="gridFormCheckOut">
-      <div class="informationCheckOutContact">
-        <form>
-          <div class="titlePoint">
-            <span>Contact information</span>
-          </div>
-          <div class="inputInformationContact">
-            <span><i class='bx bxs-envelope'></i></span>
-            <span id="top">E-mail</span>
-            <input class="email" type="text" placeholder="Enter your email...">
-          </div>
-          <div class="inputInformationContact">
-            <span><i class='bx bxs-phone'></i></span>
-            <span id="top">Phone</span>
-            <input class="phone" type="text" placeholder="Enter your phone...">
-          </div>
-          <div class="titlePoint">
-            <span>Shipping address</span>
-          </div>
-          <div class="inputInformationContact">
-            <span><i class='bx bxs-user-circle'></i></span>
-            <span id="top">Full Name</span>
-            <input class="name" type="text" placeholder="Enter your Name...">
-          </div>
-          <div class="inputInformationContact">
-            <span><i class='bx bxs-home'></i></span>
-            <span id="top">Address</span>
-            <input class="address" type="text" placeholder="Your address...">
-          </div>
-          <div class="inputInformationContact">
-            <span><i class='bx bxs-city'></i></span>
-            <span id="top">City</span>
-            <input class="city" type="text" placeholder="Your city...">
-          </div>
-          <div class="inputInformationContactCountry">
-            <div class="country">
-              <span>Country</span>
-              <div class="icon">
-                <span><i class='bx bx-world'></i></span>
-                <select>
-                  <option selected value="0">Your Country...</option>
-                  <option value="1">Colombia</option>
-                  <option value="2">Brasil</option>
-                  <option value="3">Alemania</option>
-                </select>
+    <form>
+      <div class="gridFormCheckOut">
+        <div class="informationCheckOutContact">
+            <div class="titlePoint">
+              <span>Contact information</span>
+            </div>
+            <div class="inputInformationContact">
+              <span><i class='bx bxs-envelope'></i></span>
+              <span id="top">E-mail</span>
+              <input class="email" type="text" placeholder="Enter your email...">
+            </div>
+            <div class="inputInformationContact">
+              <span><i class='bx bxs-phone'></i></span>
+              <span id="top">Phone</span>
+              <input class="phone" type="text" placeholder="Enter your phone...">
+            </div>
+            <div class="titlePoint">
+              <span>Shipping address</span>
+            </div>
+            <div class="inputInformationContact">
+              <span><i class='bx bxs-user-circle'></i></span>
+              <span id="top">Full Name</span>
+              <input class="name" type="text" placeholder="Enter your Name...">
+            </div>
+            <div class="inputInformationContact">
+              <span><i class='bx bxs-home'></i></span>
+              <span id="top">Address</span>
+              <input class="address" type="text" placeholder="Your address...">
+            </div>
+            <div class="inputInformationContact">
+              <span><i class='bx bxs-city'></i></span>
+              <span id="top">City</span>
+              <input class="city" type="text" placeholder="Your city...">
+            </div>
+            <div class="inputInformationContactCountry">
+              <div class="country">
+                <span>Country</span>
+                <div class="icon">
+                  <span><i class='bx bx-world'></i></span>
+                  <select>
+                    <option selected value="0">Your Country...</option>
+                    <option value="1">Colombia</option>
+                    <option value="2">Brasil</option>
+                    <option value="3">Alemania</option>
+                  </select>
+                </div>
+              </div>
+              <div class="country">
+                <span>Postal code</span>
+                <div class="icon">
+                  <span><i class='bx bx-barcode'></i></span>
+                  <input class="codePostal" type="text" placeholder="Your Postal Code...">
+                </div>
               </div>
             </div>
-            <div class="country">
-              <span>Postal code</span>
-              <div class="icon">
-                <span><i class='bx bx-barcode'></i></span>
-                <input class="codePostal" type="text" placeholder="Your Postal Code...">
+            <div class="submitInformation">
+              <label><input type="checkbox">Save this information for next time</label>
+              <input type="button" value="Continue">
+            </div>
+        </div>
+        <div class="shopping">
+          <div class="itemShopping">
+            <div class="boxImg">
+              <div class="boxImgShopping">
+                <img src="img/photo1.png">
+              </div>
+            </div>
+            <div class="boxContentShopping">
+              <div class="product">
+                <span>Vintage Backbag</span>
+                <span>$54.99 <span>$94.99</span></span>
+              </div>
+              <div class="quantity">
+                <i class='bx bx-message-alt-minus' ></i>
+                <i class='bx bx-message-alt-add'></i>
+                <input type="text" value="1">
               </div>
             </div>
           </div>
-          <div class="submitInformation">
-            <label><input type="checkbox">Save this information for next time</label>
-            <input type="button" value="Continue">
+          <div class="itemShopping">
+            <div class="boxImg">
+              <div class="boxImgShopping">
+                <img src="img/photo2.png">
+              </div>
+            </div>
+            <div class="boxContentShopping">
+              <div class="product">
+                <span>Levi Shoes</span>
+                <span>$74.99 <span>$124.99</span></span>
+              </div>
+              <div class="quantity">
+                <i class='bx bx-message-alt-minus' ></i>
+                <i class='bx bx-message-alt-add'></i>
+                <input type="text" value="1">
+              </div>
+            </div>
           </div>
-        </form>
+          <div class="totalShopping">
+            <div class="line"></div>
+            <div class="shipping">
+              <span>Shipping</span>
+              <span>$19</span>
+            </div>
+            <div class="line"></div>
+            <div class="shipping">
+              <span>Total</span>
+              <span>$148.98</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+  </form>
   </section>
+  <footer>
+    <p>Created by <span><a href="https://github.com/Crisops" target="_blank" rel="noopener">@Crisops</a></span> - devChallenges</p>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>
