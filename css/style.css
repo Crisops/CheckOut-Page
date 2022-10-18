@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;1,500&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  padding: 60px 20% 40px;
+}
+
+header{
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+header h1{
+  color: #4E5150;
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+section{
+  padding: 0 20% 60px;
+}
+
+section .gridFormCheckOut{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
+}
+
+section .gridFormCheckOut .informationCheckOutContact{
+  position: relative;
+  width: inherit;
+  height: inherit;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .titlePoint{
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact{
+  position: relative;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact:nth-child(3){
+  margin-bottom: 4rem;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact input{
+  outline: none;
+  color: #333333;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  padding: 15px 15px 15px 45px;
+  width: 100%;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact input::placeholder{
+  color: #828282;
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span{
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 50px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span:nth-child(2){
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  display: flex;
+  width: 60px;
+  height: 6px;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  background: #fff;
+  transition: 0.40s all ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span:nth-child(2).active{
+  position: absolute;
+  top: -5px;
+  left: 10px;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span i{
+  font-size: 1.5rem;
+  color: #828282;
+}
