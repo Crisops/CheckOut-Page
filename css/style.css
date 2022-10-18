@@ -233,7 +233,7 @@ section form .shopping{
   row-gap: 10px;
   background: #F2F2F2;
   width: 100%;
-  height: 70%;
+  height: 80%;
   border-radius: 12px;
 }
 
@@ -278,6 +278,7 @@ section form .shopping .itemShopping .boxContentShopping .product{
   flex-direction: column;
   row-gap: 10px;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 section form .shopping .itemShopping .boxContentShopping .product span:nth-child(1){
@@ -417,3 +418,193 @@ footer p span:hover::before{
 footer p span:hover a{
   color: #633120;
 }
+
+
+@media (max-width:1500px){
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select {
+    font-size: .8rem;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select option {
+    font-size: .8rem;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon input {
+    font-size: .8rem;
+  }
+
+  section form .shopping {
+    grid-template-rows: repeat(3, 1fr);
+    height: 60%;
+  }
+
+  section form .shopping .itemShopping .boxImg {
+    height: 165px;
+  }
+
+  section form .shopping .itemShopping .boxImg .boxImgShopping {
+    width: 130px;
+    height: 130px;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .product {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity {
+    margin-bottom: 1rem;
+  }
+  section form .shopping .totalShopping .shipping span:nth-child(1) {
+    color: #333333;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+
+@media (max-width:1300px){
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon span:nth-child(1) {
+    top: 10px;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select {
+    font-size: .7rem;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select option {
+    font-size: .7rem;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon input {
+    font-size: .7rem;
+  }
+
+
+  section form .shopping {
+    grid-template-rows: repeat(3, 1fr);
+    height: 55%;
+  }
+
+  section form .shopping .itemShopping .boxImg {
+    height: 150px;
+  }
+
+  section form .shopping .itemShopping .boxImg .boxImgShopping {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  section form .shopping .itemShopping .boxContentShopping .product {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .product span:nth-child(1) {
+    color: #4E5150;
+    font-weight: 600;
+    font-size: .9rem;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .product span:nth-child(2) {
+    color: #F2994A;
+    font-weight: 600;
+    font-size: .8rem;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity {
+    margin-bottom: 1rem;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity input {
+    padding: 15px 1px;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity i:nth-child(1) {
+    top: 15px;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity i:nth-child(2) {
+    top: 15px;
+  }
+
+  section form .shopping .totalShopping .shipping {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+  }
+
+  section form .shopping .totalShopping .shipping span:nth-child(1) {
+    color: #333333;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+  
+  section form .shopping .totalShopping .shipping span:nth-child(2) {
+    color: #333333;
+    font-size: .8rem;
+    font-weight: 600;
+  }
+}
+
+@media (max-width:1200px){
+
+  
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select {
+    font-size: .6rem;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select option {
+    font-size: .6rem;
+  }
+
+  section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon input {
+    font-size: .6rem;
+  }
+
+
+  section {
+    padding: 0 15% 60px;
+  }
+
+  section form .shopping .itemShopping .boxImg .boxImgShopping {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+@media (max-width:1100px){
+
+  section form .shopping .itemShopping .boxImg .boxImgShopping {
+    width: 100px;
+    height: 100px;
+  }
+  section form .shopping .itemShopping .boxContentShopping .quantity input {
+    padding: 10px 1px;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity i:nth-child(1) {
+    top: 10px;
+    font-size: 1.3rem;
+  }
+
+  section form .shopping .itemShopping .boxContentShopping .quantity i:nth-child(2) {
+    top: 10px;
+    font-size: 1.3rem;
+  }
+
+}
+
+@media (max-width: 1020px){
+  section form .shopping .itemShopping .boxImg .boxImgShopping {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+
+/* @media (max-width: 980px){
+  
+} */
