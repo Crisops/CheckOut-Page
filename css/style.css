@@ -98,12 +98,12 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   top: 20px;
   left: 50px;
   display: flex;
-  width: 60px;
+  width: 70px;
   height: 6px;
   justify-content: center;
   align-items: center;
   font-size: .8rem;
-  background: #fff;
+  background: rgba(255, 255, 255,1);
   transition: 0.40s all ease;
   opacity: 0;
   visibility: hidden;
@@ -118,9 +118,110 @@ section .gridFormCheckOut .informationCheckOutContact form .inputInformationCont
   visibility: visible;
 }
 
-
-
 section .gridFormCheckOut .informationCheckOutContact form .inputInformationContact span i{
   font-size: 1.5rem;
   color: #828282;
 }
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+  margin-bottom: 1.3rem;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px ;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country span{
+  color: #4F4F4F;
+  font-weight: 600;
+  font-size: .8rem;
+  margin-left: 10px;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon{
+  position: relative;
+  display: block;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon span:nth-child(1){
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-size: 1.5rem;
+  color: #828282;
+  z-index: 1;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon select{
+  position: relative;
+  outline: none;
+  color: #828282;
+  font-size: .9rem;
+  font-weight: 600;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  padding: 15px 15px 15px 45px;
+  width: 100%;
+  cursor: pointer;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon select option{
+  padding: 15px 15px 15px 45px;
+  color: #828282;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+
+section .gridFormCheckOut .informationCheckOutContact form .inputInformationContactCountry .country .icon input{
+  position: relative;
+  outline: none;
+  color: #828282;
+  font-size: .9rem;
+  font-weight: 600;
+  border: 1px solid #828282;
+  border-radius: 12px;
+  padding: 15px 15px 15px 45px;
+  width: 100%;
+}
+
+
+section .gridFormCheckOut .informationCheckOutContact form .submitInformation{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100px;
+}
+
+section .gridFormCheckOut .informationCheckOutContact form .submitInformation label{
+  display: flex;
+  float: left;
+  font-size: .9rem;
+}
+
+
+section .gridFormCheckOut .informationCheckOutContact form .submitInformation input:nth-child(1){
+  margin-right: 10px;
+}
+
+
+section .gridFormCheckOut .informationCheckOutContact form .submitInformation input:nth-child(2){
+  outline: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #fff;
+  background: #F2994A;
+  font-size: 1rem;
+  border-radius: 12px;
+  padding: 15px 40px;
+  cursor: pointer;
+}
+

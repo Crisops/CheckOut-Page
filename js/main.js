@@ -31,6 +31,18 @@ function topInput(clase,input){
       input.placeholder = " "; 
       $spanTop[1].classList.add("active"); 
     break;
+    case "name":
+      input.placeholder = " "; 
+      $spanTop[2].classList.add("active"); 
+    break;
+    case "address":
+      input.placeholder = " "; 
+      $spanTop[3].classList.add("active"); 
+    break;
+    case "city":
+      input.placeholder = " "; 
+      $spanTop[4].classList.add("active"); 
+    break;
   }
 }
 
