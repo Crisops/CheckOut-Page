@@ -63,6 +63,21 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   margin-bottom: 2rem;
 }
 
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact div{
+  position: absolute;
+  top: -20px;
+  right: 0px;
+  font-size: .7rem;
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact div.ok{
+  color: rgb(39, 180, 39);
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact div.error{
+  color: rgb(235, 43, 43);
+}
+
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact:nth-child(3){
   margin-bottom: 4rem;
 }
@@ -76,6 +91,11 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   border-radius: 12px;
   padding: 15px 15px 15px 45px;
   width: 100%;
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact input:focus{
+  transition: 1s all ease;
+  border: 1px solid #633120;
 }
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact input::placeholder{
@@ -119,6 +139,11 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   visibility: visible;
 }
 
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact:focus-within span i{
+  transition: 1s all ease;
+  color: #633120;
+}
+
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact span i{
   font-size: 1.5rem;
   color: #828282;
@@ -137,6 +162,23 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   flex-direction: column;
   gap: 10px ;
 }
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country div:nth-child(3){
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: .7rem;
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country div:nth-child(3).ok{
+  color: rgb(39, 180, 39);
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country div:nth-child(3).error{
+  color: rgb(235, 43, 43);
+}
+
+
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country span{
   color: #4F4F4F;
@@ -159,6 +201,11 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   z-index: 1;
 }
 
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon:focus-within span:nth-child(1) i{
+  transition: 1s all ease;
+  color: #633120;
+}
+
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select{
   position: relative;
   outline: none;
@@ -171,6 +218,12 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   width: 100%;
   cursor: pointer;
 }
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon:focus-within select{
+  transition: 1s all ease;
+  border: 1px solid #633120;
+}
+
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon select option{
   padding: 15px 15px 15px 45px;
@@ -190,6 +243,11 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
   border-radius: 12px;
   padding: 15px 15px 15px 45px;
   width: 100%;
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country .icon:focus-within input{
+  transition: 1s all ease;
+  border: 1px solid #633120;
 }
 
 
@@ -224,6 +282,22 @@ section form .gridFormCheckOut .informationCheckOutContact .submitInformation in
   border-radius: 12px;
   padding: 15px 40px;
   cursor: pointer;
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .submitInformation input:nth-child(2).error{
+  cursor: not-allowed;
+  background: none;
+  border: 1px solid rgba(226, 1, 1, 0.933);
+  color: rgba(226, 1, 1, 0.933);
+  transition: 1s all ease;
+}
+
+section form .gridFormCheckOut .informationCheckOutContact .submitInformation input:nth-child(2).ok{
+  color: #fff;
+  background: #F2994A;
+  border: none;
+  cursor: pointer;
+  transition: 1s all ease;
 }
 
 section form .shopping{
