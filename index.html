@@ -72,7 +72,7 @@
             </div>
             <div class="submitInformation">
               <label><input type="checkbox">Save this information for next time</label>
-              <input type="button" value="Continue" placeholder="">
+              <input class="submit" type="button" value="Continue" placeholder="">
             </div>
         </div>
         <div class="shopping">
@@ -88,9 +88,9 @@
                 <span>$54.99 <span>$94.99</span></span>
               </div>
               <div class="quantity">
-                <i class='bx bx-message-alt-minus' ></i>
-                <i class='bx bx-message-alt-add'></i>
-                <input type="text" value="1">
+                <i id="minus" class='bx bx-message-alt-minus' ></i>
+                <i id="add" class='bx bx-message-alt-add'></i>
+                <input id="productOne" type="text" value="0">
               </div>
             </div>
           </div>
@@ -106,9 +106,9 @@
                 <span>$74.99 <span>$124.99</span></span>
               </div>
               <div class="quantity">
-                <i class='bx bx-message-alt-minus' ></i>
-                <i class='bx bx-message-alt-add'></i>
-                <input type="text" value="1">
+                <i id="minusTwo" class='bx bx-message-alt-minus' ></i>
+                <i id="addTwo" class='bx bx-message-alt-add'></i>
+                <input id="productTwo" type="text" value="0">
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@
             <div class="line"></div>
             <div class="shipping">
               <span>Total</span>
-              <span>$148.98</span>
+              <span id="totalShoppingProduct">$0</span>
             </div>
           </div>
         </div>
@@ -132,5 +132,6 @@
     <p>Created by <span><a href="https://github.com/Crisops" target="_blank" rel="noopener">@Crisops</a></span> - devChallenges</p>
   </footer>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.0/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

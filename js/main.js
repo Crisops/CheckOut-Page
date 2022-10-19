@@ -6,6 +6,7 @@ const $spanTop = d.querySelectorAll("#top");
 const $inputInformationContact = d.querySelectorAll(".inputInformationContact");
 const $inputCountry = d.querySelectorAll(".country");
 const $buttonSubmit = d.querySelector("input[type=button]");
+const $total = d.getElementById("totalShoppingProduct");
 
 
 
@@ -20,6 +21,10 @@ let div3 = d.createElement("div");
 let div4 = d.createElement("div");
 let div5 = d.createElement("div");
 let div6 = d.createElement("div");
+
+
+let totalShopping = 0;
+console.log(totalShopping);
 
 let placeHolder = [
   "Enter your email...",
@@ -60,7 +65,7 @@ function topInput(clase,input){
 
 
 
-function button(){
+function button(e){
 
   let $input = d.querySelectorAll("input");
   let inputContact = Array.from($input);
@@ -103,11 +108,25 @@ function button(){
       $buttonSubmit.classList.remove("error");
     }
     $buttonSubmit.classList.add("ok");
+    if(e == "Enter"){
+      Swal.fire({
+        icon: 'success',
+        title: 'Datos Enviados',
+        text: 'Su producto llegara en 3 días',
+      })
+    }
   }else{
     if($buttonSubmit.classList.contains("ok")){
       $buttonSubmit.classList.remove("ok");
     }
     $buttonSubmit.classList.add("error");
+    if(e == "Enter"){
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: 'Por favor llene el formulario',
+      })
+    }
   }
 
 }
@@ -139,9 +158,77 @@ d.addEventListener("click", (e) =>{
       }
     })
   }
+
+  if(e.target.matches("#minus")){
+    let inputProductOne = d.getElementById("productOne");
+    inputProductOne.value -= 1
+    if (inputProductOne.value < 1) {
+      inputProductOne.value = 0
+      totalShopping -=  54.99;
+      if (totalShopping < 0) {
+        totalShopping = 0;
+      }
+    }else{
+      totalShopping -=  54.99;
+    }
+    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+  }
+
+  if(e.target.matches("#add")){
+    let inputProductOne = d.getElementById("productOne");
+    inputProductOne.value =  Number(inputProductOne.value) + 1;
+    totalShopping += 54.99;
+    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+  }
+
+  if(e.target.matches("#minusTwo")){
+    let inputProductTwo = d.getElementById("productTwo");
+    inputProductTwo.value -= 1
+    if (inputProductTwo.value < 1) {
+      inputProductTwo.value = 0
+      totalShopping -= 74.99;
+      if (totalShopping < 0) {
+        totalShopping = 0;
+      }
+    }else{
+      totalShopping -= 74.99;
+    }
+    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+  }
+
+  if(e.target.matches("#addTwo")){
+    let inputProductTwo = d.getElementById("productTwo");
+    inputProductTwo.value =  Number(inputProductTwo.value) + 1;
+    totalShopping += 74.99;
+    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+  }
+
+  if(e.target.matches(".submit.error")){
+    Swal.fire({
+      icon: 'error',
+      title: 'Error',
+      text: 'Por favor llene el formulario',
+    })
+  }
+
+  if(e.target.matches(".submit.ok")){
+    Swal.fire({
+      icon: 'success',
+      title: 'Datos Enviados',
+      text: 'Su producto llegara en 3 días',
+    })
+  }
+
 })
 
 d.addEventListener( "keyup", (e) =>{
+
+  if (e.key == "Enter") {
+    button(e.key);
+  }
+
+
+
   let minlength = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
   if (e.target.matches(".email")){
     if(!minlength.test(e.target.value)){
