@@ -8,6 +8,7 @@ const $inputCountry = d.querySelectorAll(".country");
 const $buttonSubmit = d.querySelector("input[type=button]");
 
 
+
 let inputContact = Array.from($input);
 let spanTop = Array.from($spanTop);
 let inputInformationContact = Array.from($inputInformationContact);
@@ -57,17 +58,56 @@ function topInput(clase,input){
 }
 
 
-function button(y){
-  if(y){
-    if($buttonSubmit.classList.contains("ok")){
-      $buttonSubmit.classList.remove("ok");
-    }
-    $buttonSubmit.classList.add("error");
-  }else{
+
+
+function button(){
+
+  let $input = d.querySelectorAll("input");
+  let inputContact = Array.from($input);
+  const $select = d.querySelector("select").value;
+  
+  let error = 0;
+
+  if (inputContact[0].value == "") {
+    error ++;
+  }
+
+  if (inputContact[1].value == "") {
+    error ++;
+  }
+
+  if (inputContact[2].value == "") {
+    error ++;
+  }
+
+  if (inputContact[3].value == "") {
+    error ++;
+  }
+
+  if (inputContact[4].value == "") {
+    error ++;
+  }
+
+  if (inputContact[5].value == "") {
+    error ++;
+  }
+
+  if($select == "0"){
+    error ++;
+  }
+
+  console.log(error);
+
+  if(error == 0){
     if($buttonSubmit.classList.contains("error")){
       $buttonSubmit.classList.remove("error");
     }
     $buttonSubmit.classList.add("ok");
+  }else{
+    if($buttonSubmit.classList.contains("ok")){
+      $buttonSubmit.classList.remove("ok");
+    }
+    $buttonSubmit.classList.add("error");
   }
 
 }
@@ -76,7 +116,11 @@ d.addEventListener("DOMContentLoaded", () =>{
   $buttonSubmit.classList.add("error");
 })
 
-
+d.addEventListener("change", (e) =>{
+  if (e.target.matches(".select")) {
+    button();
+  }
+})
 
 d.addEventListener("click", (e) =>{
   if(e.target.localName != "input" ){
@@ -104,13 +148,13 @@ d.addEventListener( "keyup", (e) =>{
       div.classList.add("error");
       div.textContent = "Error. Al parecer este email no es valido. Vuelve a intentar";
       inputInformationContact[0].insertAdjacentElement("beforeend",div);
-      button(true);
+      button();
     }else{
       div.classList.remove("error");
       div.classList.add("ok");
       div.textContent = "Correcto";
       inputInformationContact[0].insertAdjacentElement("beforeend",div);
-      button(false);
+      button();
     } 
   }
   if (e.target.matches(".phone")){
@@ -119,13 +163,13 @@ d.addEventListener( "keyup", (e) =>{
       div2.classList.add("error");
       div2.textContent = "Número de télefono incorrecto (Solo # de télefono Colombiano)";
       inputInformationContact[1].insertAdjacentElement("beforeend",div2);
-      button(true);
+      button();
     }else{
       div2.classList.remove("error");
       div2.classList.add("ok");
       div2.textContent = "Correcto";
       inputInformationContact[1].insertAdjacentElement("beforeend",div2);
-      button(false);
+      button();
     } 
   }
   if (e.target.matches(".name")){
@@ -134,13 +178,13 @@ d.addEventListener( "keyup", (e) =>{
       div3.classList.add("error");
       div3.textContent = "No se aceptan Números";
       inputInformationContact[2].insertAdjacentElement("beforeend",div3);
-      button(true);
+      button();
     }else{
       div3.classList.remove("error");
       div3.classList.add("ok");
       div3.textContent = "Correcto";
       inputInformationContact[2].insertAdjacentElement("beforeend",div3);
-      button(false);
+      button();
     } 
   }
   if (e.target.matches(".address")){
@@ -148,13 +192,13 @@ d.addEventListener( "keyup", (e) =>{
       div4.classList.add("error");
       div4.textContent = "Direción muy larga, por favor ingrese una mas corta";
       inputInformationContact[3].insertAdjacentElement("beforeend",div4);
-      button(true);
+      button();
     }else{
       div4.classList.remove("error");
       div4.classList.add("ok");
       div4.textContent = "Correcto";
       inputInformationContact[3].insertAdjacentElement("beforeend",div4);
-      button(false);
+      button();
     } 
   }
   if (e.target.matches(".city")){
@@ -163,13 +207,13 @@ d.addEventListener( "keyup", (e) =>{
       div5.classList.add("error");
       div5.textContent = "No se aceptan Números";
       inputInformationContact[4].insertAdjacentElement("beforeend",div5);
-      button(true);
+      button();
     }else{
       div5.classList.remove("error");
       div5.classList.add("ok");
       div5.textContent = "Correcto";
       inputInformationContact[4].insertAdjacentElement("beforeend",div5);
-      button(false);
+      button();
     } 
   }
   if (e.target.matches(".codePostal")){
@@ -178,13 +222,12 @@ d.addEventListener( "keyup", (e) =>{
       div6.classList.add("error");
       div6.textContent = "Código Postal no valido";
       inputCountry[1].insertAdjacentElement("beforeend",div6);
-      button(true);
     }else{
       div6.classList.remove("error");
       div6.classList.add("ok");
       div6.textContent = "Correcto";
       inputCountry[1].insertAdjacentElement("beforeend",div6);
-      button(false);
+      button();
     } 
   }
 })
