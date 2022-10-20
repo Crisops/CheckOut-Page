@@ -160,11 +160,16 @@ d.addEventListener("click", (e) =>{
   }
 
   if(e.target.matches("#minus")){
-    let envio;
+    let envio = 0;
     let inputProductOne = d.getElementById("productOne");
+    let inputProductTwo = d.getElementById("productTwo");
     inputProductOne.value -= 1
     if (inputProductOne.value < 1) {
-      envio = 0;
+      if(totalShopping && inputProductTwo.value > 0){
+        envio = 19;
+      }else{
+        envio = 0;
+      }
       if(inputProductOne.value == 0){
         totalShopping -=  54.99;
       }
@@ -190,9 +195,14 @@ d.addEventListener("click", (e) =>{
   if(e.target.matches("#minusTwo")){
     let envio = 0;
     let inputProductTwo = d.getElementById("productTwo");
+    let inputProductOne = d.getElementById("productOne");
     inputProductTwo.value -= 1
     if (inputProductTwo.value < 1) {
-      envio = 0;
+      if(totalShopping && inputProductOne.value > 0){
+        envio = 19;
+      }else{
+        envio = 0;
+      }
       if(inputProductTwo.value == 0){
         totalShopping -=  74.99;
       }
