@@ -93,7 +93,7 @@ function button(e){
     error ++;
   }
 
-  if (inputContact[5].value == "") {
+  if (inputContact[5].value == "" || inputContact[5].value.length <= 6 || isNaN(inputContact[5].value)) {
     error ++;
   }
 
@@ -237,9 +237,14 @@ d.addEventListener( "keyup", (e) =>{
 
   if (e.key == "Enter") {
     button(e.key);
+    if(!totalShopping && $buttonSubmit.classList.contains("ok")){
+      Swal.fire({
+        icon: 'error',
+        title: 'Error',
+        text: `La compra actual es de $${totalShopping}`,
+      })
+    }
   }
-
-
 
   let minlength = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
   if (e.target.matches(".email")){
@@ -287,9 +292,9 @@ d.addEventListener( "keyup", (e) =>{
     } 
   }
   if (e.target.matches(".address")){
-    if(e.target.value.length > 30){
+    if(e.target.value.length > 30 || e.target.value.length == 0){
       div4.classList.add("error");
-      div4.textContent = "Direción muy larga, por favor ingrese una mas corta";
+      div4.textContent = "La dirección no puede estar vacía ni tampoco excederse de 30 caracteres";
       inputInformationContact[3].insertAdjacentElement("beforeend",div4);
       button();
     }else{
@@ -321,6 +326,7 @@ d.addEventListener( "keyup", (e) =>{
       div6.classList.add("error");
       div6.textContent = "Código Postal no valido";
       inputCountry[1].insertAdjacentElement("beforeend",div6);
+      button();
     }else{
       div6.classList.remove("error");
       div6.classList.add("ok");

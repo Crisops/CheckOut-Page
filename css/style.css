@@ -72,10 +72,12 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact div.ok{
   color: rgb(39, 180, 39);
+  font-weight: 600;
 }
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact div.error{
   color: rgb(235, 43, 43);
+  font-weight: 600;
 }
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContact:nth-child(3){
@@ -172,10 +174,12 @@ section form .gridFormCheckOut .informationCheckOutContact .inputInformationCont
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country div:nth-child(3).ok{
   color: rgb(39, 180, 39);
+  font-weight: 600;
 }
 
 section form .gridFormCheckOut .informationCheckOutContact .inputInformationContactCountry .country div:nth-child(3).error{
   color: rgb(235, 43, 43);
+  font-weight: 600;
 }
 
 
