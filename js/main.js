@@ -124,7 +124,7 @@ function button(e){
       Swal.fire({
         icon: 'error',
         title: 'Error',
-        text: 'Por favor llene el formulario',
+        text: 'Por favor llene el formulario correctamente',
       })
     }
   }
@@ -165,18 +165,12 @@ d.addEventListener("click", (e) =>{
     let inputProductTwo = d.getElementById("productTwo");
     inputProductOne.value -= 1
     if (inputProductOne.value < 1) {
-<<<<<<< HEAD
       if(totalShopping && inputProductTwo.value > 0){
         envio = 19;
       }else{
         envio = 0;
       }
       if(inputProductOne.value == 0){
-=======
-      envio = 0;
-      if(inputProductOne.value == 0 && totalShopping){
-        envio = 19;
->>>>>>> b31b1263e09b2affbd5f16dade386027593a2c3b
         totalShopping -=  54.99;
       }
       inputProductOne.value = 0
@@ -204,18 +198,12 @@ d.addEventListener("click", (e) =>{
     let inputProductOne = d.getElementById("productOne");
     inputProductTwo.value -= 1
     if (inputProductTwo.value < 1) {
-<<<<<<< HEAD
       if(totalShopping && inputProductOne.value > 0){
         envio = 19;
       }else{
         envio = 0;
       }
       if(inputProductTwo.value == 0){
-=======
-      envio = 0;
-      if(inputProductTwo.value == 0 && totalShopping){
-        envio = 19;
->>>>>>> b31b1263e09b2affbd5f16dade386027593a2c3b
         totalShopping -=  74.99;
       }
       inputProductTwo.value = 0
