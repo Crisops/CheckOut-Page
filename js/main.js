@@ -24,7 +24,7 @@ let div6 = d.createElement("div");
 
 
 let totalShopping = 0;
-console.log(totalShopping);
+// console.log(totalShopping);
 
 let placeHolder = [
   "Enter your email...",
@@ -37,7 +37,7 @@ let placeHolder = [
 
 
 function topInput(clase,input){
-  console.log(clase);
+  // console.log(clase);
   switch (clase) {
     case "email":
       input.placeholder = ""; 
@@ -101,7 +101,7 @@ function button(e){
     error ++;
   }
 
-  console.log(error);
+  // console.log(error);
 
   if(error == 0){
     if($buttonSubmit.classList.contains("error")){
@@ -160,47 +160,59 @@ d.addEventListener("click", (e) =>{
   }
 
   if(e.target.matches("#minus")){
+    let envio;
     let inputProductOne = d.getElementById("productOne");
     inputProductOne.value -= 1
     if (inputProductOne.value < 1) {
+      envio = 0;
+      if(inputProductOne.value == 0){
+        totalShopping -=  54.99;
+      }
       inputProductOne.value = 0
-      totalShopping -=  54.99;
       if (totalShopping < 0) {
         totalShopping = 0;
       }
     }else{
+      envio = 19;
       totalShopping -=  54.99;
     }
-    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+    $total.textContent = `$${Number((totalShopping + envio).toFixed(2))}`;
   }
 
   if(e.target.matches("#add")){
+    let envio = 19;
     let inputProductOne = d.getElementById("productOne");
     inputProductOne.value =  Number(inputProductOne.value) + 1;
     totalShopping += 54.99;
-    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+    $total.textContent = `$${Number((totalShopping + envio).toFixed(2))}`;
   }
 
   if(e.target.matches("#minusTwo")){
+    let envio = 0;
     let inputProductTwo = d.getElementById("productTwo");
     inputProductTwo.value -= 1
     if (inputProductTwo.value < 1) {
+      envio = 0;
+      if(inputProductTwo.value == 0){
+        totalShopping -=  74.99;
+      }
       inputProductTwo.value = 0
-      totalShopping -= 74.99;
       if (totalShopping < 0) {
         totalShopping = 0;
       }
     }else{
+      envio = 19;
       totalShopping -= 74.99;
     }
-    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+    $total.textContent = `$${Number((totalShopping + envio).toFixed(2))}`;
   }
 
   if(e.target.matches("#addTwo")){
+    let envio = 19;
     let inputProductTwo = d.getElementById("productTwo");
     inputProductTwo.value =  Number(inputProductTwo.value) + 1;
     totalShopping += 74.99;
-    $total.textContent = `$${Number(totalShopping.toFixed(2))}`;
+    $total.textContent = `$${Number((totalShopping + envio).toFixed(2))}`;
   }
 
   if(e.target.matches(".submit.error")){
